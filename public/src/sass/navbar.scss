@@ -1,0 +1,29 @@
+$a-tags: "a:link, a:visited";
+$a-tags-hover: "a:hover, a:active";
+
+header {
+  background: linear-gradient(#133253, #2b4c6f);
+  .header-content {
+    display: flex;
+    justify-content: center;
+    height: 4em;
+    ul.navbar {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row wrap;
+      padding-left: 0;
+      margin: auto 0;
+      list-style: none;
+
+      li {
+        #{$a-tags} {
+          text-decoration: none;
+        }
+        #{$a-tags-hover} {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

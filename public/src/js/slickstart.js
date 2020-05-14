@@ -7,5 +7,6 @@ $(document).ready(function () {
     speed: 3500,
     fade: true,
     cssEase: "linear",
+    pauseOnHover: false,
   });
 });

@@ -1,0 +1,25 @@
+.news {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  &-header {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  &-wrapper {
+    margin-top: 2em;
+    &-border {
+      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+    }
+    &-header {
+      padding-top: 2em;
+      font-size: 24px;
+      font-weight: 500;
+    }
+    &-paragraph {
+      padding-bottom: 2em;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}

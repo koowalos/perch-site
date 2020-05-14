@@ -1,0 +1,36 @@
+footer {
+  background: linear-gradient(#2b4c6f, #133253);
+  color: #f4f4f4;
+  padding-top: 2em;
+  .page-footer {
+    &-contact {
+      &-header {
+        font-size: 26px;
+        font-weight: 500;
+      }
+      &-paragraph {
+        margin-top: 1em;
+        ul {
+          margin: 0;
+          li {
+            list-style: none;
+          }
+          &-post {
+            li {
+              color: #c8c8c8;
+            }
+          }
+        }
+      }
+    }
+    &-about {
+      &-header {
+        font-size: 26px;
+        font-weight: 500;
+      }
+      &-paragraph {
+        margin-top: 1em;
+      }
+    }
+  }
+}

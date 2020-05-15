@@ -2,7 +2,6 @@ $a-tags: "a:link, a:visited";
 $a-tags-hover: "a:hover, a:active";
 
 header {
-  height: 62px;
   background: linear-gradient(#133253, #2b4c6f);
   .page-logo {
     &-company {
@@ -14,7 +13,7 @@ header {
     display: flex;
     justify-content: center;
     height: 4em;
-    ul.navbar {
+    &-navbar {
       width: 80%;
       display: flex;
       justify-content: space-between;
@@ -22,19 +21,14 @@ header {
       padding-left: 0;
       margin: auto 0;
       list-style: none;
+    }
+  }
+}
 
-      li {
-        #{$a-tags} {
-          text-decoration: none;
-        }
-        #{$a-tags-hover} {
-          text-decoration: underline;
-        }
-        a {
-          color: #f4f4f4;
-          text-transform: uppercase;
-        }
-      }
+@media screen and (max-width: 992px) {
+  header {
+    .header-content-navbar {
+      display: none;
     }
   }
 }

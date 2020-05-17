@@ -7,28 +7,106 @@ header {
     &-company {
       max-width: 100%;
       height: 60px;
+      margin-top: 10px;
     }
   }
   .header-content {
     display: flex;
-    justify-content: center;
-    height: 4em;
+    justify-content: flex-end;
     &-navbar {
-      width: 80%;
+      width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       flex-flow: row wrap;
-      padding-left: 0;
-      margin: auto 0;
       list-style: none;
+      cursor: pointer;
+      #{$a-tags} {
+        color: #f4f4f4;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      #{$a-tags-hover} {
+        text-decoration: underline;
+      }
+    }
+    .dropbtn {
+      background-color: transparent;
+      color: #f4f4f4;
+      text-transform: uppercase;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: 500;
+      border: none;
     }
   }
 }
 
-@media screen and (max-width: 992px) {
-  header {
-    .header-content-navbar {
+input[type="checkbox"] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+label {
+  display: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav[role="custom-dropdown"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  html,
+  body {
+    margin: 0;
+  }
+
+  nav[role="custom-dropdown"] {
+    ul {
       display: none;
+      height: 100%;
+    }
+
+    label {
+      position: relative;
+      display: block;
+      width: 100%;
+      min-height: 2.25em;
+      padding: 0.45em;
+      font-size: 2em;
+      margin-top: 18px;
+    }
+
+    label:after {
+      position: absolute;
+      right: 0.25em;
+      content: "\2261";
+      font-size: 1.8em;
+    }
+
+    // input[type="checkbox"]:checked ~ label:after {
+    //   color: #222;
+    // }
+
+    input[type="checkbox"]:checked ~ ul {
+      display: block;
+
+      > li {
+        width: 100%;
+        opacity: 0.8;
+        text-align: left;
+
+        &:after {
+          position: absolute;
+          right: 0.25em;
+          content: "\203A";
+        }
+      }
     }
   }
 }

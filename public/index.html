@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="./src/css/flexgrid.css" type="text/css" />
     <link rel="stylesheet" href="./assets/css/main.css" type="text/css" />
     <link rel="stylesheet" href="./src/css/slick.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <header class="page-header">
-      <div class="wrap page-wrap">
-        <div class="row">
-          <div class="col-xs-12 col-sm-3">
+      <div class="wrap">
+        <div class="row between-sm">
+          <div class="col-xs-12 col-sm-2">
             <div class="page-logo">
               <img
                 src="./assets/images/company-logo.svg"
@@ -21,15 +25,29 @@
               />
             </div>
           </div>
-          <div class="col-xs-12 col-sm-9">
+          <div class="col-xs-12 col-sm-10">
             <div class="header-content">
-              <ul class="navbar">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Perch genesis</a></li>
-                <li><a href="#">Best tactics</a></li>
-                <li><a href="#">Popular rigs</a></li>
-                <li><a href="#">Finding perch</a></li>
-              </ul>
+              <nav role="custom-dropdown">
+                <input type="checkbox" id="button" />
+                <label for="button" onclick></label>
+                <ul class="header-content-navbar">
+                  <li class="header-content-navbar-item dropdown">
+                    <div class="dropbtn"><a href="#">Home</a></div>
+                  </li>
+                  <li class="header-content-navbar-item dropdown">
+                    <div class="dropbtn"><a href="#">Perch genesis</a></div>
+                  </li>
+                  <li class="header-content-navbar-item dropdown">
+                    <div class="dropbtn"><a href="#">Best tactics</a></div>
+                  </li>
+                  <li class="header-content-navbar-item dropdown">
+                    <div class="dropbtn"><a href="#">Popular rigs</a></div>
+                  </li>
+                  <li class="header-content-navbar-item dropdown">
+                    <div class="dropbtn"><a href="#">Finding perch</a></div>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
@@ -39,9 +57,29 @@
       <div class="top-main-carousel">
         <div>
           <img src="../assets/images/top-bg.jpg" alt="Angler" />
+          <div class="top-main-carousel-text">
+            <div class="top-main-carousel-text-header">
+              Explore the undiscovered lands
+            </div>
+            <div class="top-main-carousel-text-paragraph">
+              Find perfect locations worldwide with stunning views and lots of
+              fish
+            </div>
+            <div class="top-main-carousel-text-button">Find out more</div>
+          </div>
         </div>
         <div>
           <img src="../assets/images/top-bg1.jpg" alt="River" />
+          <div class="top-main-carousel-text">
+            <div class="top-main-carousel-text-header">
+              Get to know your local areas
+            </div>
+            <div class="top-main-carousel-text-paragraph">
+              See what your local waters got to offer and share experience with
+              others
+            </div>
+            <div class="top-main-carousel-text-button">Find out more</div>
+          </div>
         </div>
       </div>
     </div>
@@ -50,31 +88,45 @@
         <div class="row between-xs">
           <div class="col-xs-12 col-sm-4">
             <div class="tact-spot-tips">
-              <img
-                src="./assets/images/season-tactics.jpg"
-                alt="Season tactics"
-              />
+              <div class="img-hover">
+                <img
+                  src="./assets/images/season-tactics.jpg"
+                  alt="Season tactics"
+                />
+              </div>
               <div class="tact-spot-tips-content">
-                <h3>Season best tactics</h3>
-                <p>Check the best method!</p>
+                <div class="tact-spot-tips-content-header">
+                  Season best tactics
+                </div>
+                <div class="tact-spot-tips-content-paragraph">
+                  Check the best method!
+                </div>
               </div>
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
             <div class="tact-spot-tips">
-              <img src="./assets/images/new-spot.jpg" alt="Season tactics" />
+              <div class="img-hover">
+                <img src="./assets/images/new-spot.jpg" alt="Season tactics" />
+              </div>
               <div class="tact-spot-tips-content">
-                <h3>Fishing spots</h3>
-                <p>Find your new favourite place!</p>
+                <div class="tact-spot-tips-content-header">Fishing spots</div>
+                <div class="tact-spot-tips-content-paragraph">
+                  Find your new favourite place!
+                </div>
               </div>
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
             <div class="tact-spot-tips">
-              <img src="./assets/images/tips.jpg" alt="Season tactics" />
+              <div class="img-hover">
+                <img src="./assets/images/tips.jpg" alt="Season tactics" />
+              </div>
               <div class="tact-spot-tips-content">
-                <h3>Tips and tricks</h3>
-                <p>Learn the best from the best!</p>
+                <div class="tact-spot-tips-content-header">Tips and tricks</div>
+                <div class="tact-spot-tips-content-paragraph">
+                  Learn the best from the best!
+                </div>
               </div>
             </div>
           </div>
@@ -127,6 +179,7 @@
                     <hr />
                     Interview with the luckiest man.
                   </div>
+                  <div class="news-wrapper-button">Read more</div>
                 </div>
                 <div class="col-xs-12 col-sm-3 news-wrapper-border">
                   <div class="news-wrapper-header">
@@ -140,6 +193,7 @@
                     <hr />
                     Find out how to stock up.
                   </div>
+                  <div class="news-wrapper-button">Read more</div>
                 </div>
                 <div class="col-xs-12 col-sm-3 news-wrapper-border">
                   <div class="news-wrapper-header">
@@ -152,6 +206,7 @@
                     <hr />
                     Sales goes throught the roof!
                   </div>
+                  <div class="news-wrapper-button">Read more</div>
                 </div>
               </div>
             </div>
@@ -162,7 +217,7 @@
     <footer class="page-footer">
       <div class="wrap">
         <div class="row">
-          <div class="col-xs-12 col-sm-4">
+          <div class="col-xs-12 col-sm-5">
             <div class="page-footer-contact">
               <div class="page-footer-contact-header">Contact us</div>
               <div class="page-footer-contact-paragraph">
@@ -183,7 +238,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-8">
+          <div class="col-xs-12 col-sm-7">
             <div class="page-footer-about">
               <div class="page-footer-about-header">About us</div>
               <div class="page-footer-about-paragraph">
@@ -193,7 +248,7 @@
                 like to join our growing community please drop us an e-mail and
                 we will be in touch to arrange membership. Don't hesitate to pay
                 us a visit if you are nerby our office - we are more than
-                welcome to have a chat with ye olde cup of tea!
+                welcome to have a chat about perch!
               </div>
             </div>
           </div>

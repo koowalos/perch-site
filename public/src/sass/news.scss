@@ -1,18 +1,22 @@
 .news {
-  margin-top: 3em;
-  margin-bottom: 3em;
+  background-color: #e5e5e5;
+  padding-top: 4em;
+  padding-bottom: 6em;
   &-header {
-    text-align: center;
+    padding-bottom: 1em;
+    // text-align: center;
     font-size: 32px;
     font-weight: 700;
   }
   &-wrapper {
-    margin-top: 2em;
+    padding-top: 2em;
     &-border {
+      background-color: #f5f5f5;
       box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
     }
     &-header {
-      padding-top: 2em;
+      padding-top: 1em;
+      padding-bottom: 0.2em;
       font-size: 24px;
       font-weight: 500;
     }
@@ -21,5 +25,82 @@
       font-size: 16px;
       font-weight: 400;
     }
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900");
+
+:root {
+  --text-color: hsla(210, 50%, 85%, 1);
+  --shadow-color: hsla(210, 40%, 52%, 0.4);
+  --btn-color: hsl(210, 80%, 42%);
+  --bg-color: #141218;
+}
+
+.news-wrapper-button {
+  position: relative;
+  padding: 10px 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 10px;
+
+  font-family: "Source Code Pro";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: var(--text-color);
+
+  background-color: var(--btn-color);
+  box-shadow: var(--shadow-color) 2px 2px 22px;
+  border-radius: 4px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.news-wrapper-button::before {
+  content: "";
+  pointer-events: none;
+  opacity: 0.6;
+  background: radial-gradient(
+      circle at 20% 35%,
+      transparent 0,
+      transparent 2px,
+      var(--text-color) 3px,
+      var(--text-color) 4px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 75% 44%,
+      transparent 0,
+      transparent 2px,
+      var(--text-color) 3px,
+      var(--text-color) 4px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 46% 52%,
+      transparent 0,
+      transparent 4px,
+      var(--text-color) 5px,
+      var(--text-color) 6px,
+      transparent 6px
+    );
+
+  width: 100%;
+  height: 300%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 5s linear infinite both;
+}
+
+@keyframes bubbles {
+  from {
+    transform: translate();
+  }
+  to {
+    transform: translate(0, -66.666%);
   }
 }

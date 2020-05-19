@@ -53,3 +53,14 @@ footer {
     }
   }
 }
+
+@media screen and (max-width: 1225px) {
+  .page-footer {
+    &-contact {
+      margin: 1em 1em;
+    }
+    &-about {
+      margin: 1em 1em;
+    }
+  }
+}

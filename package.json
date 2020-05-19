@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error : no test specified\" && exit 1"
+    "test": "echo \"Error : no test specified\" && exit 1",
+    "deploy": "surge \"/mnt/d/Front End/web-projects/perch-site/public/\" probable-holiday.surge.sh"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",

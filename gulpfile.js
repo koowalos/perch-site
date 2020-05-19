@@ -5,6 +5,7 @@ const clean = require("gulp-clean");
 const rename = require("gulp-rename");
 const concat = require("gulp-concat");
 const minify = require("gulp-minify");
+const sourcemaps = require("gulp-sourcemaps");
 
 const bs = function (cb) {
   browserSync.init({
@@ -25,7 +26,11 @@ const cleanup = function (cb) {
 };
 
 const buildSass = function (cb) {
-  src("public/src/sass/*.scss").pipe(sass()).pipe(dest("public/assets/css"));
+  src("public/src/sass/main.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(sourcemaps.write())
+    .pipe(dest("public/assets/css"));
   cb();
 };
 

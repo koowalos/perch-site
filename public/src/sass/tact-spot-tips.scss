@@ -1,14 +1,13 @@
 .tact-spot {
   background-color: #f4f4f4;
-  padding-top: 7em;
-  padding-bottom: 7em;
+  padding-top: 5em;
+  padding-bottom: 5em;
   &-tips {
+    overflow: hidden;
+    height: 300px;
     position: relative;
     max-width: 100%;
-    img {
-      max-height: 100%;
-      width: auto;
-    }
+    margin-bottom: 1em;
     &-content {
       position: absolute;
       width: 100%;
@@ -34,32 +33,15 @@
 }
 
 .img-hover {
-  height: 300px;
-  overflow: hidden;
-}
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  transition: all 2.5s ease;
 
-.img-hover img {
-  transition: transform 2.5s ease;
-}
-
-.img-hover:hover img {
-  transform: scale(1.5);
-}
-
-@media screen and (max-width: 768px) {
-  .tact-spot-tips-content {
-    max-width: 450px;
-  }
-  .img-hover img {
-    transition: none;
-  }
-  .img-hover:hover img {
-    transform: none;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .vertTips {
-    flex-wrap: wrap;
+  &:hover {
+    transform: scale(1.2);
+    transition: transform 2s ease;
   }
 }

@@ -3,6 +3,8 @@ $a-tags-hover: "a:hover, a:active";
 
 header {
   background: linear-gradient(#133253, #2b4c6f);
+  padding-left: 10px;
+  padding-right: 10px;
   .page-logo {
     &-company {
       max-width: 100%;

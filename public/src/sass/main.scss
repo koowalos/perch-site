@@ -4,10 +4,10 @@
 @import "parallax";
 @import "news";
 @import "page-footer";
-// .col-xs,
-// .col-xs-12 {
-//   border: 1px solid red;
-// }
+.col-xs,
+.col-xs-12 {
+  border: 1px solid red;
+}
 * {
   box-sizing: border-box;
 }
@@ -51,13 +51,14 @@ body {
       line-height: 1.2em;
     }
     &-button {
+      color: #f4f4f4;
       text-transform: uppercase;
       text-align: center;
       background-color: #626462;
       width: auto;
-      margin-bottom: 1em;
       padding: 10px;
       transition-duration: 0.4s;
+      border-color: #626462;
       &:hover {
         background-color: #303330;
         color: white;
@@ -72,11 +73,21 @@ body {
   display: flex;
 }
 
-// .slick-slide img {
-//   max-width: 100%;
-//   height: auto;
-// }
-
 .slick-track {
   height: 600px;
+}
+
+@media screen and (max-width: 920px) {
+  .top-main-carousel-text {
+    max-width: 400px;
+    &-header {
+      font-size: 22px;
+    }
+    &-paragraph {
+      font-size: 18px;
+    }
+    &-button {
+      font-size: 12px;
+    }
+  }
 }

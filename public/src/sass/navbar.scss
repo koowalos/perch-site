@@ -54,6 +54,7 @@ label {
   display: none;
   cursor: pointer;
   user-select: none;
+  color: white;
 }
 
 nav[role="custom-dropdown"] {
@@ -62,7 +63,7 @@ nav[role="custom-dropdown"] {
   width: 100%;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 920px) {
   html,
   body {
     margin: 0;
@@ -76,7 +77,8 @@ nav[role="custom-dropdown"] {
 
     label {
       position: relative;
-      display: block;
+      display: flex;
+      flex-direction: row-reverse;
       width: 100%;
       min-height: 2.25em;
       padding: 0.45em;
@@ -86,14 +88,10 @@ nav[role="custom-dropdown"] {
 
     label:after {
       position: absolute;
-      right: 0.25em;
+      right: 0;
       content: "\2261";
       font-size: 1.8em;
     }
-
-    // input[type="checkbox"]:checked ~ label:after {
-    //   color: #222;
-    // }
 
     input[type="checkbox"]:checked ~ ul {
       display: block;
@@ -105,8 +103,6 @@ nav[role="custom-dropdown"] {
 
         &:after {
           position: absolute;
-          right: 0.25em;
-          content: "\203A";
         }
       }
     }

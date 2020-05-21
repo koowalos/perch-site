@@ -22,6 +22,15 @@ header {
       flex-flow: row wrap;
       list-style: none;
       cursor: pointer;
+      li {
+        background-color: transparent;
+        color: #f4f4f4;
+        text-transform: uppercase;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        border: none;
+      }
       #{$a-tags} {
         color: #f4f4f4;
         text-transform: uppercase;
@@ -32,79 +41,129 @@ header {
         text-decoration: underline;
       }
     }
-    .dropbtn {
-      background-color: transparent;
-      color: #f4f4f4;
-      text-transform: uppercase;
-      padding: 10px;
-      font-size: 18px;
-      font-weight: 500;
-      border: none;
-    }
   }
 }
 
-input[type="checkbox"] {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-
-label {
-  display: none;
-  cursor: pointer;
-  user-select: none;
-  color: white;
-}
-
-nav[role="custom-dropdown"] {
-  display: flex;
+.header-content {
   position: relative;
-  width: 100%;
+}
+#toggle,
+.toggle {
+  display: none;
+}
+// .header-content-navbar > li {
+//   list-style: none;
+//   float: right;
+// }
+
+/* Nicolas Gallagher micro clearfix */
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
 }
 
-@media screen and (max-width: 920px) {
-  html,
-  body {
+@media only screen and (max-width: 936px) {
+  .header-content-navbar {
+    background: linear-gradient(#2b4c6f, #133253);
+    margin-top: -15px;
+    margin-right: -1px;
+    display: flex;
+    opacity: 0;
+    padding-left: 10px;
+    max-width: 220px;
+    position: absolute;
+    right: 0;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+  }
+  .header-content-navbar > li {
+    display: block;
+    width: 100%;
     margin: 0;
   }
+  .header-content-navbar > li > a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .toggle {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  #toggle:checked + div .header-content-navbar {
+    display: block;
+    opacity: 1;
+  }
+}
 
-  nav[role="custom-dropdown"] {
-    ul {
-      display: none;
-      height: 100%;
-    }
+.toggle {
+  z-index: 10;
+}
 
-    label {
-      position: relative;
-      display: flex;
-      flex-direction: row-reverse;
-      width: 100%;
-      min-height: 2.25em;
-      padding: 0.45em;
-      font-size: 2em;
-      margin-top: 18px;
-    }
+@media only screen and (max-width: 936px) {
+  .header-content-navbar {
+    z-index: 10;
+  }
 
-    label:after {
-      position: absolute;
-      right: 0;
-      content: "\2261";
-      font-size: 1.8em;
-    }
+  .header-content-navbar > li > a:hover,
+  .header-content-navbar > li > a:focus {
+    background: #133253;
+  }
 
-    input[type="checkbox"]:checked ~ ul {
-      display: block;
+  .toggle:after {
+    content: "\2261";
+    display: block;
+    width: 50px;
+    margin: 15px 0;
+    padding: 10px 50px 10px 40px;
+    background: #3b8db1;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 
-      > li {
-        width: 100%;
-        opacity: 0.8;
-        text-align: left;
+  .toggle:hover:after {
+    background: #45abd6;
+  }
 
-        &:after {
-          position: absolute;
-        }
-      }
-    }
+  #toggle:checked + div .toggle:after {
+    content: "\2261";
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .header-content > h1 {
+    text-align: center;
+  }
+  .header-content > h1,
+  .nav,
+  .toggle:after {
+    float: none;
+  }
+  .toggle:after {
+    text-align: center;
+    width: 100%;
   }
 }

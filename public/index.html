@@ -16,7 +16,7 @@
     <header class="page-header">
       <div class="wrap">
         <div class="row between-sm">
-          <div class="col-xs-12 col-sm-2">
+          <div class="col-xs-6 col-sm-2">
             <div class="page-logo">
               <img
                 src="./assets/images/company-logo.svg"
@@ -25,38 +25,44 @@
               />
             </div>
           </div>
-          <div class="col-xs-12 col-sm-10">
+          <div class="col-xs-6 col-sm-10">
             <div class="header-content">
-              <nav role="custom-dropdown">
-                <input type="checkbox" id="button" />
-                <label for="button" onclick></label>
+              <input type="checkbox" id="toggle" />
+              <div class="header-dropdown">
+                <label
+                  for="toggle"
+                  class="toggle"
+                  data-open="Main Menu"
+                  data-close="Close Menu"
+                  onclick
+                ></label>
                 <ul class="header-content-navbar">
-                  <li class="header-content-navbar-item dropdown">
-                    <div class="dropbtn"><a href="#">Home</a></div>
+                  <li>
+                    <a href="#">Home</a>
                   </li>
-                  <li class="header-content-navbar-item dropdown">
-                    <div class="dropbtn"><a href="#">Perch genesis</a></div>
+                  <li>
+                    <a href="#">Perch genesis</a>
                   </li>
-                  <li class="header-content-navbar-item dropdown">
-                    <div class="dropbtn"><a href="#">Best tactics</a></div>
+                  <li>
+                    <a href="#">Best tactics</a>
                   </li>
-                  <li class="header-content-navbar-item dropdown">
-                    <div class="dropbtn"><a href="#">Popular rigs</a></div>
+                  <li>
+                    <a href="#">Popular rigs</a>
                   </li>
-                  <li class="header-content-navbar-item dropdown">
-                    <div class="dropbtn"><a href="#">Finding perch</a></div>
+                  <li>
+                    <a href="#">Finding perch</a>
                   </li>
                 </ul>
-              </nav>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <div class="page-content">
-      <div class="top-main-carousel">
-        <div>
-          <img src="../assets/images/top-bg.jpg" alt="Angler" />
+    <div class="top-main-carousel">
+      <div>
+        <img src="../assets/images/top-bg.jpg" alt="Angler" />
+        <div class="carousel-wrap">
           <div class="top-main-carousel-text">
             <div class="top-main-carousel-text-header">
               Explore the undiscovered lands
@@ -65,11 +71,13 @@
               Find perfect locations worldwide with stunning views and lots of
               fish
             </div>
-            <div class="top-main-carousel-text-button">Find out more</div>
+            <button class="top-main-carousel-text-button">Find out more</button>
           </div>
         </div>
-        <div>
-          <img src="../assets/images/top-bg1.jpg" alt="River" />
+      </div>
+      <div>
+        <img src="../assets/images/top-bg1.jpg" alt="River" />
+        <div class="carousel-wrap">
           <div class="top-main-carousel-text">
             <div class="top-main-carousel-text-header">
               Get to know your local areas
@@ -78,25 +86,25 @@
               See what your local waters got to offer and share experience with
               others
             </div>
-            <div class="top-main-carousel-text-button">Find out more</div>
+            <button class="top-main-carousel-text-button">Find out more</button>
           </div>
         </div>
       </div>
     </div>
     <div class="page-content tact-spot">
-      <div class="wrap srap">
-        <div class="row between-xs vertTips">
-          <div class="col-xs-12 col-sm-4">
+      <div class="wrap">
+        <div class="row between-xs">
+          <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="tact-spot-tips">
-              <div class="img-hover">
-                <img
-                  src="./assets/images/season-tactics.jpg"
-                  alt="Season tactics"
-                />
-              </div>
+              <div
+                class="img-hover"
+                style="
+                  background-image: url('./assets/images/season-tactics.jpg');
+                "
+              ></div>
               <div class="tact-spot-tips-content">
                 <div class="tact-spot-tips-content-header">
-                  Season best tactics
+                  Season tactics
                 </div>
                 <div class="tact-spot-tips-content-paragraph">
                   Check the best method!
@@ -104,11 +112,13 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-4">
+          <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="tact-spot-tips">
-              <div class="img-hover">
-                <img src="./assets/images/new-spot.jpg" alt="Season tactics" />
-              </div>
+              <div
+                class="img-hover"
+                style="background-image: url('./assets/images/new-spot.jpg');"
+              ></div>
+
               <div class="tact-spot-tips-content">
                 <div class="tact-spot-tips-content-header">Fishing spots</div>
                 <div class="tact-spot-tips-content-paragraph">
@@ -117,11 +127,13 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-4">
+          <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="tact-spot-tips">
-              <div class="img-hover">
-                <img src="./assets/images/tips.jpg" alt="Season tactics" />
-              </div>
+              <div
+                class="img-hover"
+                style="background-image: url('./assets/images/tips.jpg');"
+              ></div>
+
               <div class="tact-spot-tips-content">
                 <div class="tact-spot-tips-content-header">Tips and tricks</div>
                 <div class="tact-spot-tips-content-paragraph">
@@ -130,37 +142,52 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="page-content">
-      <div
-        class="parallax-window"
-        data-parallax="scroll"
-        data-image-src="./assets/images/parallax.jpg"
-      >
-        <div class="parallax-window-banner">
-          <div class="parallax-window-banner-content">
-            <div class="parallax-window-banner-content-header">7</div>
-            <div class="parallax-window-banner-content-paragraph">
-              Days until open season
-            </div>
-          </div>
-          <div class="parallax-window-banner-content">
-            <div class="parallax-window-banner-content-header">11</div>
-            <div class="parallax-window-banner-content-paragraph">
-              New venues added
-            </div>
-          </div>
-          <div class="parallax-window-banner-content">
-            <div class="parallax-window-banner-content-header">22</div>
-            <div class="parallax-window-banner-content-paragraph">
-              New members today!
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="tact-spot-tips">
+              <div
+                class="img-hover"
+                style="background-image: url('./assets/images/gear.jpg');"
+              ></div>
+
+              <div class="tact-spot-tips-content">
+                <div class="tact-spot-tips-content-header">Gear up!</div>
+                <div class="tact-spot-tips-content-paragraph">
+                  Buy the newest gear!
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div
+      class="parallax-window"
+      data-parallax="scroll"
+      data-image-src="./assets/images/parallax.jpg"
+    >
+      <div class="parallax-window-banner">
+        <div class="parallax-window-banner-content">
+          <div class="parallax-window-banner-content-header">7</div>
+          <div class="parallax-window-banner-content-paragraph">
+            Days until open season
+          </div>
+        </div>
+        <div class="parallax-window-banner-content">
+          <div class="parallax-window-banner-content-header">11</div>
+          <div class="parallax-window-banner-content-paragraph">
+            New venues added
+          </div>
+        </div>
+        <div class="parallax-window-banner-content">
+          <div class="parallax-window-banner-content-header">22</div>
+          <div class="parallax-window-banner-content-paragraph">
+            New members today!
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="page-content news">
       <div class="wrap">
         <div class="row">
@@ -187,24 +214,23 @@
                     <hr />
                   </div>
                   <div class="news-wrapper-paragraph">
-                    Due to Covid-19 Rapala decided to shut down all their
-                    factories. This move will have a major impact on local
-                    retailers.
+                    Due to Covid-19 Rapala decided to shut all their factories.
+                    This move will have a major impact on all retailers.
                     <hr />
-                    Find out how to stock up.
+                    Find out where to buy.
                   </div>
                   <div class="news-wrapper-button">Read more</div>
                 </div>
                 <div class="col-xs-12 col-sm-3 news-wrapper-border">
                   <div class="news-wrapper-header">
-                    New MEPPS spinners
+                    New spinners
                     <hr />
                   </div>
                   <div class="news-wrapper-paragraph">
                     Brand new range from the top brand on the market! Have a
                     look at these beauties and get them while you can!
                     <hr />
-                    Sales goes throught the roof!
+                    Sales goes mad!
                   </div>
                   <div class="news-wrapper-button">Read more</div>
                 </div>

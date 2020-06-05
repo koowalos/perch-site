@@ -62,4 +62,4 @@ exports.watchFiles = watchFiles;
 exports.bs = bs;
 exports.buildSass = buildSass;
 exports.default = series(cleanup, scriptMerge, watchFiles);
-exports.build = series(cleanup, scriptMerge, buildSass);
+exports.build = series(cleanup, scriptMerge, buildSass); //for deploy
